@@ -1,0 +1,29 @@
+GET http://localhost:3000/transcations
+
+#############
+
+POST http://localhost:3000/transactions
+Content-Type:application/json 
+
+{
+  "type": "expense",
+  "category": 1,
+  "amount": 50.00,
+  "date": "2024-10-22",
+  "description": "Dinner with friends"
+}
+
+####################
+
+PUT http://localhost:3000/transactions/1
+Content-Type: application/json
+
+{
+  "type": "expense",
+  "category": 2,
+  "amount": 75.00,
+  "date": "2024-10-23",
+  "description": "Updated Dinner"
+}
+###################
+DELETE http://localhost:3000/transactions/6
